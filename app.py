@@ -14,7 +14,7 @@ if uploaded_file:
     st.image(image, caption='Uploaded Image', use_column_width=True)
 
     results = model(image)
-    results.render()  # Annotate image in place
+    results.render() 
 
     threat_score = round(np.random.uniform(10, 100), 2)
     st.image(results.ims[0], caption="Threat Detections")
